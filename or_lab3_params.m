@@ -15,17 +15,19 @@ ddtheta_ref = 0;
 % Disturbance torque static
 t_Ms = 1.5;
 Ms_0 = 0;
-Delta_Ms = 1;
+Delta_Ms = 1; %% change this for lab, yes, this is Delta Ms
 
 
 % link parameters
-m2_est = 0.3; % use this value to calculate J_un
+m2 = 0.3; 
 d2 = 0.2;
-m2_real = 0.3; % this value will be changed, use this value to calculate J
+R = 0.1;
+mt = 0.3; % this value will be changed, use this to calculate J
+mt_n = 0.3; % nominal value of load mass, use this to calculate J_n
 
 % Moments of inertia - insert calculation here
-%J_n = % your code here, use m2_est
-%J = % your code here, use m2_real
+%J_n = % your code here, use mt_n to calculate J_n, use J_n to calculate regulator params
+%J = % your code here, use mt
 
 
 % Model parameters
@@ -39,6 +41,6 @@ T = 0.1;
 zeta = 1;
 
 % insert calculation of regulator parameters here
-%Ki = % your code here, make sure J_un=Ki*K
+%Ki = % your code here, make sure J_n=Ki*K
 %Kp = % your code here
 %Kd = % your code here
